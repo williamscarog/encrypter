@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --fonttitle: "Poppins", sans-serif;
+  --fontbody: 'Dancing Script', Times New Roman, serif;
+}
+
+
+.arialText {
+  background-color: #dddddd;
+  color: #666666;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  background-color: pink;
+  padding: 1rem 2rem;
+  text-align: center;
+}
