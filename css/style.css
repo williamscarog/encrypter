@@ -10,16 +10,22 @@
 header {
   background-color: pink;
 }
+.min-logo{
+  padding: 1.5rem 0 1.5rem 1rem;
+}
 
 
 
 .arialText {
-  background-color: #dddddd;
+  margin-top: 3.5rem;
+  background-color: #f2f0f0;
   color: #666666;
   padding: 1em;
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
+  font-family: var(--fontbody);
+  font-size: 1.5rem;
 }
 
 .container {
@@ -28,10 +34,81 @@ header {
   grid-template-rows: auto 1fr auto;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info{  /* caja de icono y texto */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  margin-top: 15rem;
+}
+
+.info-text{
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-family: var(--fonttitle);
+  
+}
+
+.btns-encrypt{   /* caja de botones */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 1rem 4rem;  /*Arriba -Derecha e Izquierda- Abajo*/
+  width: 100%;
+  padding: 1.5rem;
+}
+
+ .encrypt-btn{
+  background-color: #0A3871;
+  color: white;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-family: var(--fontbody);
+  font-size: 1.5rem;
+} 
+
+.uncrypt-btn{
+  background-color: #ffffff;
+  color: #0A3871;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: solid #0A3871;
+  width: 100%;
+  text-align: center;
+  font-family: var(--fontbody);
+  font-size: 1.5rem;
+}
+
+.uncrypt-btn:hover{
+  background-color: #ffffff;
+  color: #0A3871;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: solid #0A3871;
+  width: 100%;
+  text-align: center;
+  font-family: var(--fontbody);
+  font-size: 1.5rem;
+} 
+
 
 
 footer {
   background-color: pink;
-  padding: 1rem 2rem;
+  border-radius: 0.1rem;
   text-align: center;
+  font-size: 0.6rem;
 }
