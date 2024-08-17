@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --blue: #1e90ff;
+  --blue: #0A3871;
   --white: #ffffff;
+  --ligh-blue: #F3F5FC;
+  --gray-400:#495057;
+  --gray-500:#343A40;
   --fonttitle: "Poppins", sans-serif;
   --fontbody: 'Dancing Script', Times New Roman, serif;
 }
+body{
+  background-color: var(--ligh-blue);
+}
 
 header {
-  background-color: pink;
+  background-color: var(--ligh-blue);
 }
 .min-logo{
   padding: 1.5rem 0 1.5rem 1rem;
@@ -18,8 +24,7 @@ header {
 
 .arialText {
   margin-top: 3.5rem;
-  background-color: #f2f0f0;
-  color: #666666;
+  background-color: var(--white);
   padding: 1em;
   border-radius: 10px;
   border: 2px solid transparent;
@@ -27,6 +32,18 @@ header {
   font-family: var(--fontbody);
   font-size: 1.5rem;
 }
+
+.arialText::placeholder{
+  color: var(--gray-500);
+  font-family: var(--fonttitle);
+}
+
+.arialText:focus::placeholder{
+  color: var(--blue);
+  font-family: var(--fontbody);
+}
+
+
 
 .container {
   min-height: 100dvh;
@@ -44,7 +61,7 @@ main{
   align-items: center;
   gap: 0.5rem;
   justify-content: flex-start;
-  margin-top: 15rem;
+  margin-top: 13rem;
 }
 
 .info-text{
@@ -111,4 +128,5 @@ footer {
   border-radius: 0.1rem;
   text-align: center;
   font-size: 0.6rem;
+  margin-top: 7rem;
 }
