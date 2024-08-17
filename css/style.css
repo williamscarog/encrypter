@@ -1,3 +1,9 @@
+/*TODO ya hemos practicamente completado el diseño para movil de nuestra app para cifrar texto
+Aún faltán algunos detalles pero está casi completada al 100%
+1- en la parte del textarea me gustaria diferenciar ambos y que el segundo text area ofrezca un hover cuando no exita texto que diga "Ingresa el texto que desees encriptar o desencriptar."
+
+Luego sería hacerlo responsive y por último que sea funcional*/
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -36,11 +42,13 @@ header {
 .arialText::placeholder{
   color: var(--gray-500);
   font-family: var(--fonttitle);
+  font-size: 1rem;
 }
 
 .arialText:focus::placeholder{
   color: var(--blue);
   font-family: var(--fontbody);
+  font-size: 1.5rem;
 }
 
 
@@ -61,7 +69,7 @@ main{
   align-items: center;
   gap: 0.5rem;
   justify-content: flex-start;
-  margin-top: 13rem;
+  margin-top: 1rem;
 }
 
 .info-text{
@@ -124,9 +132,9 @@ main{
 
 
 footer {
-  background-color: pink;
   border-radius: 0.1rem;
   text-align: center;
   font-size: 0.6rem;
   margin-top: 7rem;
+  font-family: var(--fontbody);
 }
