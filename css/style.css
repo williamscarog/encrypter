@@ -1,9 +1,4 @@
-/*TODO:  ya hemos practicamente completado el diseño para movil de nuestra app para cifrar texto
-Aún faltán algunos detalles pero está casi completada al 100%
-1.como agregar un icono en la seccion de abajo para copiar todo.
-2. en la parte del textarea me gustaria diferenciar ambos y que el segundo text area ofrezca un hover cuando no exita texto que diga "Ingresa el texto que desees encriptar o desencriptar."
-
-Luego sería hacerlo responsive y por último que sea funcional*/
+/*TODO: Luego sería hacerlo responsive y por último que sea funcional*/
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -20,6 +15,12 @@ body{
   background-color: var(--ligh-blue);
 }
 
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 header {
   background-color: var(--ligh-blue);
 }
@@ -27,7 +28,11 @@ header {
   padding: 1.5rem 0 1.5rem 1rem;
 }
 
-
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .arialText {
   margin-top: 3.5rem;
@@ -39,6 +44,7 @@ header {
   font-family: var(--fontbody);
   font-size: 1.5rem;
   color: var(--blue);
+  resize: none;
 }
 
 .arialText::placeholder{
@@ -54,24 +60,14 @@ header {
 }
 
 
-
-.container {
-  min-height: 100dvh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .info{  /* caja de icono y texto */
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: flex-start;
-  margin-top: 1rem;
+  margin: 1rem 0 0 1rem;
+  align-self: flex-start;
+  
 }
 
 .info-text{
@@ -118,7 +114,7 @@ main{
   font-size: 1.5rem;
 }
 
-.uncrypt-btn:hover{
+.uncrypt-btn:hover{ /*FIXME: Todo esto no es necesario aqui averigua lo que es necesario*/
   background-color: #ffffff;
   color: #0A3871;
   text-decoration: none;
@@ -232,8 +228,9 @@ main{
 #anim:hover {
   animation: shake 500ms ease-in-out forwards;
 }
-
-
+.copy-btn{
+  animation: shake 500ms ease-in-out forwards;
+}
 
 footer {
   border-radius: 0.1rem;
@@ -241,4 +238,62 @@ footer {
   font-size: 0.6rem;
   margin-top: 7rem;
   font-family: var(--fontbody);
+}
+
+/*TODO: Haciendo nuestro site responsive*/
+@media (min-width: 601px) {
+  /* Estilos para pantallas de 768px de ancho o más */
+  .min-logo{
+    padding: 4.59rem 0 1.5rem 2.5rem;
+  }
+
+  .arialText {
+    margin-top: 3.5rem;
+    background-color: var(--ligh-blue);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: var(--fontbody);
+    font-size: 2rem;
+    color: var(--blue);
+    width: 90dvw;
+    height: 40dvh;
+    resize: none;
+  }
+
+  .arialText::placeholder{
+    font-size: 2rem;
+  }
+  
+  .arialText:focus::placeholder{
+    font-size: 2.5rem;
+  }
+
+  .info{
+    margin: 1rem 0 0 2.5rem;
+  }
+
+  .btns-encrypt{
+    flex-direction: row;
+    padding: 2.5rem;
+  }
+
+  .encrypt-btn{
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .uncrypt-btn{
+    padding: 0.9rem;
+    border-radius: 1.5rem;
+  }
+
+}
+
+
+
+/* FIXME: Diseño para pantallas grandes */
+@media (max-width: 1023px) {
+  /* Estilos para pantallas de hasta 1023px de ancho */
 }
