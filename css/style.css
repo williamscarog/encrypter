@@ -1,6 +1,7 @@
-/*TODO ya hemos practicamente completado el diseño para movil de nuestra app para cifrar texto
+/*TODO:  ya hemos practicamente completado el diseño para movil de nuestra app para cifrar texto
 Aún faltán algunos detalles pero está casi completada al 100%
-1- en la parte del textarea me gustaria diferenciar ambos y que el segundo text area ofrezca un hover cuando no exita texto que diga "Ingresa el texto que desees encriptar o desencriptar."
+1.como agregar un icono en la seccion de abajo para copiar todo.
+2. en la parte del textarea me gustaria diferenciar ambos y que el segundo text area ofrezca un hover cuando no exita texto que diga "Ingresa el texto que desees encriptar o desencriptar."
 
 Luego sería hacerlo responsive y por último que sea funcional*/
 
@@ -30,13 +31,14 @@ header {
 
 .arialText {
   margin-top: 3.5rem;
-  background-color: var(--white);
+  background-color: var(--ligh-blue);
   padding: 1em;
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
   font-family: var(--fontbody);
   font-size: 1.5rem;
+  color: var(--blue);
 }
 
 .arialText::placeholder{
@@ -128,6 +130,108 @@ main{
   font-family: var(--fontbody);
   font-size: 1.5rem;
 } 
+
+.arialText-clipboard{
+  margin-top: 3.5rem;
+  background-color: var(--white);
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: var(--fontbody);
+  color: var(--gray-400);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  max-width: 90dvh;
+}
+
+.arialText-clipboard::placeholder{
+  color: var(--gray-500);
+  font-family: var(--fonttitle);
+  font-size: 1rem;
+}
+
+.arialText-clipboard:focus::placeholder{
+  color: var(--blue);
+  font-family: var(--fontbody);
+  font-size: 1.5rem;
+}
+/* Codigo insertado para animar la etiqueta span, encontrado en internet */
+#btnCopiar{
+  cursor: pointer; /* Cambia el cursor al hacer hover */
+  padding: 7px 7px;
+  border: none;
+  border-radius: 100%;
+  background: url(--blue);
+    /* ... otros estilos ... */
+    position: absolute;
+    bottom: -162px;
+    right: 59px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#btnCopiar img{
+  width: 24px;
+}
+
+.copy-btn:before,
+.copy-btn:after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.copy-btn:before {
+  border-width: 11px 8px 0 5px;
+  border-style: solid;
+  border-color: var(--gray-500) transparent transparent transparent;
+  top: 16px;
+   transform: translateY(20px);
+}
+
+.copy-btn:after {
+  font-family: var(--fonttitle);
+  color: var(--white);
+  content: attr(data-tooltip);
+  background: var(--gray-500);
+  width: 138px;
+  height: 66px;
+  font-size: 10px;
+  font-weight: 300;
+  top: 21px;
+  left: -123px;
+  padding: 7px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(15px);
+}
+
+.copy-btn:hover::before,
+.copy-btn:hover::after {
+  opacity: 1;
+  /* transform: translateY(-2px); *//* FIXME: Quitar comentarios cuando termines*/
+}
+
+@keyframes shake {
+  0% { 
+    transform: rotate(2deg);
+  }
+  50% {
+   transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#anim:hover {
+  animation: shake 500ms ease-in-out forwards;
+}
 
 
 

@@ -19,15 +19,18 @@
     <main>
       <textarea class="arialText" placeholder="Ingrese el texto aqui"></textarea>
       <div class="info">
-        <img class="info-img" src="assets/bi_exclamation-circle-fill.svg"
-            alt="icono de exclamación">
+        <img class="info-img" src="assets/bi_exclamation-circle-fill.svg" alt="icono de exclamación">
         <span class="info-text">Solo letras minúsculas y sin acentos</span>
       </div>
       <div class="btns-encrypt">
         <a class="encrypt-btn" href="#">Encriptar</a>
         <a class="uncrypt-btn" href="#">Desencriptar</a>
       </div>
-      <textarea class="arialText" placeholder="Ningún mensaje fue encontrado"></textarea>
+      <textarea class="arialText-clipboard" placeholder="Ningún mensaje fue encontrado"></textarea>
+      <div id="anim"> <!-- Animacion del span -->
+        <span id="btnCopiar" class="copy-btn" data-tooltip="Ingresa el texto que desees encriptar o desencriptar."><img src="assets/clipboard-fill.svg"
+            alt="copy icon"></span>
+      </div>
     </main>
 
     <footer>
