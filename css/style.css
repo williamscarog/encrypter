@@ -135,10 +135,13 @@ main{
   border: 2px solid transparent;
   outline: none;
   font-family: var(--fontbody);
-  color: var(--gray-400);
+  color: var(--gray-500);
   font-weight: bolder;
   font-size: 1.5rem;
   max-width: 90dvh;
+  text-align: center;
+  resize: none;
+  width: 90dvw;
 }
 
 .arialText-clipboard::placeholder{
@@ -288,6 +291,12 @@ footer {
     padding: 0.9rem;
     border-radius: 1.5rem;
   }
+
+  .arialText-clipboard::placeholder{
+    font-size: 1.5rem;
+  }
+
+
 
 }
 
