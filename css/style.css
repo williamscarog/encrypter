@@ -35,22 +35,24 @@ main{
 }
 
 .arialText {
-  margin-top: 3.5rem;
   background-color: var(--ligh-blue);
-  padding: 1em;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  outline: none;
+  color: var(--blue);
   font-family: var(--fontbody);
   font-size: 1.5rem;
-  color: var(--blue);
+  margin-top: 3.5rem;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: none;
+  width: 90dvw;
+  height: 30dvh;
+  outline: none;
   resize: none;
 }
 
 .arialText::placeholder{
   color: var(--gray-500);
   font-family: var(--fonttitle);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .arialText:focus::placeholder{
@@ -114,7 +116,7 @@ main{
   font-size: 1.5rem;
 }
 
-.uncrypt-btn:hover{ /*FIXME: Todo esto no es necesario aqui averigua lo que es necesario*/
+.uncrypt-btn:hover{
   background-color: #ffffff;
   color: #0A3871;
   text-decoration: none;
@@ -127,50 +129,65 @@ main{
   font-size: 1.5rem;
 } 
 
+.textarea-container {
+  position: relative;
+  width: 97%;
+  margin: 0 auto;
+}
+
 .arialText-clipboard{
-  margin-top: 3.5rem;
   background-color: var(--white);
+  font-family: var(--fontbody);
+  color: var(--gray-500);
+  font-size: 1.5rem;
   padding: 1em;
   border-radius: 10px;
   border: 2px solid transparent;
-  outline: none;
-  font-family: var(--fontbody);
-  color: var(--gray-500);
   font-weight: bolder;
-  font-size: 1.5rem;
   max-width: 90dvh;
-  text-align: center;
+  text-align: left;
+  width: 100%;
+  outline: none;
   resize: none;
-  width: 90dvw;
+  height: 247px;
 }
 
 .arialText-clipboard::placeholder{
   color: var(--gray-500);
   font-family: var(--fonttitle);
   font-size: 1rem;
+  text-align: center;
 }
 
 .arialText-clipboard:focus::placeholder{
-  color: var(--blue);
+  color: var(--gray-500);
   font-family: var(--fontbody);
   font-size: 1.5rem;
-}
-/* Codigo insertado para animar la etiqueta span, encontrado en internet */
-#btnCopiar{
-  cursor: pointer; /* Cambia el cursor al hacer hover */
-  padding: 7px 7px;
-  border: none;
-  border-radius: 100%;
-  background: url(--blue);
-    /* ... otros estilos ... */
-    position: absolute;
-    bottom: -162px;
-    right: 59px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
-#btnCopiar img{
-  width: 24px;
+.floating-button {
+  position: absolute;
+  bottom: 16px;
+  right: 21px;
+}
+
+.copy-btn {
+  background: var(--ligh-blue);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.copy-btn img {
+  width: 20px;
+  height: 20px;
 }
 
 .copy-btn:before,
@@ -179,59 +196,49 @@ main{
   content: '';
   opacity: 0;
   transition: all 0.4s ease;
+  pointer-events: none;
 }
 
 .copy-btn:before {
-  border-width: 11px 8px 0 5px;
+  border-width: 14px 11px 4px 8px;
   border-style: solid;
-  border-color: var(--gray-500) transparent transparent transparent;
-  top: 16px;
-   transform: translateY(20px);
+  border-color: transparent var(--gray-500) var(--gray-500) transparent;
+  top: -33px;
+  left: -38%;
+  transform: translateX(-50%) translateY(20px);
 }
 
 .copy-btn:after {
-  font-family: var(--fonttitle);
-  color: var(--white);
   content: attr(data-tooltip);
+  font-family: var(--fonttitle);
   background: var(--gray-500);
-  width: 138px;
-  height: 66px;
-  font-size: 10px;
+  width: 160px;
+  color: white;
+  font-size: 13px;
   font-weight: 300;
-  top: 21px;
-  left: -123px;
-  padding: 7px;
+  top: -97px;
+  left: -239%;
+  padding: 6px;
   border-radius: 5px;
   letter-spacing: 1px;
-  transform: translateY(15px);
+  transform: translateX(-50%) translateY(20px);
+  white-space: wrap;
 }
 
 .copy-btn:hover::before,
 .copy-btn:hover::after {
   opacity: 1;
-  /* transform: translateY(-2px); *//* FIXME: Quitar comentarios cuando termines*/
+  transform: translateX(-50%) translateY(-1px);
 }
 
 @keyframes shake {
-  0% { 
-    transform: rotate(2deg);
-  }
-  50% {
-   transform: rotate(-3deg);
-  }
-  70% {
-    transform: rotate(3deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(2deg); }
+  50% { transform: rotate(-3deg); }
+  70% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
 }
 
 #anim:hover {
-  animation: shake 500ms ease-in-out forwards;
-}
-.copy-btn{
   animation: shake 500ms ease-in-out forwards;
 }
 

@@ -26,13 +26,14 @@
         <a class="encrypt-btn" href="#">Encriptar</a>
         <a class="uncrypt-btn" href="#">Desencriptar</a>
       </div>
-      <textarea class="arialText-clipboard" placeholder="Ningún mensaje fue encontrado"></textarea>
-      <div id="anim"> <!-- Animacion del span -->
-        <span id="btnCopiar" class="copy-btn" data-tooltip="Ingresa el texto que desees encriptar o desencriptar."><img src="assets/clipboard-fill.svg"
-            alt="copy icon"></span>
+      <div class="textarea-container">
+        <textarea class="arialText-clipboard" placeholder="Ningún mensaje fue encontrado"></textarea>
+        <div id="anim" class="floating-button">
+          <button id="btnCopiar" class="copy-btn" data-tooltip="Ingresa el texto que desees encriptar o desencriptar.">
+            <img src="assets/clipboard-fill.svg" alt="copy icon">
+          </button>
+        </div>
       </div>
-    </main>
-
     <footer>
       <p>&copy; 2024, Williams Caro Galvan</p>
     </footer>
